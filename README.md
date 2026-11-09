@@ -6,6 +6,10 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/Geek-MD/Video_Tools/blob/main/LICENSE)
 [![HACS Custom Repository](https://img.shields.io/badge/HACS-Custom%20Repository-blue)](https://hacs.xyz/)
 
+<!-- ha-marketplace:exclude-start -->
+[![Open your Home Assistant instance and open Video Tools in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=Geek-MD&repository=Video_Tools&category=integration)
+<!-- ha-marketplace:exclude-end -->
+
 [![Ruff + Mypy + Hassfest](https://github.com/Geek-MD/Video_Tools/actions/workflows/validate.yml/badge.svg)](https://github.com/Geek-MD/Video_Tools/actions/workflows/validate.yml)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
@@ -18,15 +22,22 @@ Home Assistant custom integration that normalizes aspect ratio of videos and pro
 
 Version **1.0.5** updates all repository links and adds Home Assistant 2026.11 Marketplace metadata and validation.
 
-## Requirements
+## 📋 Requirements
 
 This integration **requires** the [Downloader](https://www.home-assistant.io/integrations/downloader/) integration to be installed and configured first. Video Tools uses Downloader's configuration to automatically detect the download directory where videos are processed.
 
 > 💡 **Tip:** Since Video Tools is integrated in [Advanced Downloader](https://github.com/Geek-MD/Advanced_Downloader), consider using Advanced Downloader for a more complete media file management experience, including downloading, resizing, deleting, and more.
 
-## Installation
+## 🛠 Installation
 
-### HACS (Recommended)
+### Option 1: Marketplace (Home Assistant 2026.11 or newer)
+
+1. Install and configure the built-in Downloader integration first.
+2. Go to **Settings → Marketplace**.
+3. Search for **Video Tools**, select **Install**, and confirm the version.
+4. Complete setup when Home Assistant opens the integration page.
+
+### Option 2: HACS (Home Assistant 2026.10 or older)
 
 1. **Install Downloader first** (required dependency):
    - Go to Settings > Devices & Services
@@ -48,7 +59,7 @@ This integration **requires** the [Downloader](https://www.home-assistant.io/int
 13. Search for "Video Tools"
 14. Follow the configuration steps
 
-### Manual Installation
+### Option 3: Manual installation
 
 1. **Install Downloader first** (required dependency):
    - Go to Settings > Devices & Services
@@ -65,7 +76,7 @@ This integration **requires** the [Downloader](https://www.home-assistant.io/int
 
 **Note:** The setup wizard will automatically detect and use the download directory configured in your Downloader integration.
 
-## Configuration
+## ⚙️ Configuration
 
 **Note:** Video Tools can only be configured once per Home Assistant instance. This ensures proper service and sensor management.
 
@@ -75,7 +86,7 @@ During setup, you'll need to configure:
 - **Download directory**: Where videos to be processed are located. This field will be automatically pre-filled from your Downloader integration configuration.
 - **Processing timeout** (optional, default: 300 seconds / 5 minutes): Maximum time to wait for video processing to complete. Optimized for Home Assistant Green hardware specifications (Rockchip RK3566, 4 GB RAM). Increase this value if you frequently process longer or higher-resolution videos.
 
-## Features
+## ✨ Features
 
 - **Status Sensor** - Monitor the integration's processing state with a sensor entity that tracks:
   - Current state: `working` or `idle`
@@ -95,7 +106,7 @@ During setup, you'll need to configure:
 - Emits automation-friendly events on video processing success, failure, or skip
 - Easy setup through the Home Assistant UI
 
-## Services
+## 🖥 Services
 
 ### video_tools.normalize_video
 
@@ -134,7 +145,7 @@ automation:
           generate_thumbnail: true
 ```
 
-## Entities
+## 📊 Entities
 
 ### Status Sensor
 
@@ -168,12 +179,12 @@ automation:
             Processes: {{ state_attr('sensor.video_tools_status', 'processes') | join(', ') }}
 ```
 
-## Events
+## 📡 Events
 
 The service fires a single event that can be used in automations:
 - `video_tools_video_processing_finished`: Fired when video processing completes, regardless of the result. The result is available in the event data under the `result` field, which can be `success`, `skipped`, or `failed`. Additional information about the processing is available in the sensor state attributes.
 
-## Service Lifecycle
+## 🔄 Service lifecycle
 
 When the `video_tools.normalize_video` service is called, it follows a specific lifecycle to ensure proper operation and state management:
 
@@ -231,7 +242,7 @@ automation:
           message: "Status: {{ state_attr('sensor.video_tools_status', 'last_job') }}"
 ```
 
-## Requirements
+## 📋 Runtime requirements
 
 This integration requires:
 - FFmpeg to be available in the Home Assistant environment (typically pre-installed)
