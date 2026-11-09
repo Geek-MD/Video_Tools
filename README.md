@@ -1,20 +1,22 @@
-[![Geek-MD - Video Tools](https://img.shields.io/static/v1?label=Geek-MD&message=Video%20Tools&color=blue&logo=github)](https://github.com/Geek-MD/Video_Normalizer)
-[![Stars](https://img.shields.io/github/stars/Geek-MD/Video_Normalizer?style=social)](https://github.com/Geek-MD/Video_Normalizer)
-[![Forks](https://img.shields.io/github/forks/Geek-MD/Video_Normalizer?style=social)](https://github.com/Geek-MD/Video_Normalizer)
+[![Geek-MD - Video Tools](https://img.shields.io/static/v1?label=Geek-MD&message=Video%20Tools&color=blue&logo=github)](https://github.com/Geek-MD/Video_Tools)
+[![Stars](https://img.shields.io/github/stars/Geek-MD/Video_Tools?style=social)](https://github.com/Geek-MD/Video_Tools)
+[![Forks](https://img.shields.io/github/forks/Geek-MD/Video_Tools?style=social)](https://github.com/Geek-MD/Video_Tools)
 
-[![GitHub Release](https://img.shields.io/github/release/Geek-MD/Video_Normalizer?include_prereleases&sort=semver&color=blue)](https://github.com/Geek-MD/Video_Normalizer/releases)
-[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/Geek-MD/Video_Normalizer/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/release/Geek-MD/Video_Tools?include_prereleases&sort=semver&color=blue)](https://github.com/Geek-MD/Video_Tools/releases)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/Geek-MD/Video_Tools/blob/main/LICENSE)
 [![HACS Custom Repository](https://img.shields.io/badge/HACS-Custom%20Repository-blue)](https://hacs.xyz/)
 
-[![Ruff + Mypy + Hassfest](https://github.com/Geek-MD/Video_Normalizer/actions/workflows/validate.yml/badge.svg)](https://github.com/Geek-MD/Video_Normalizer/actions/workflows/validate.yml)
+[![Ruff + Mypy + Hassfest](https://github.com/Geek-MD/Video_Tools/actions/workflows/validate.yml/badge.svg)](https://github.com/Geek-MD/Video_Tools/actions/workflows/validate.yml)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 
-<img width="200" height="200" alt="image" src="https://github.com/Geek-MD/Video_Normalizer/blob/main/custom_components/video_tools/brand/logo.png?raw=true" />
+<img width="200" height="200" alt="image" src="https://github.com/Geek-MD/Video_Tools/blob/main/custom_components/video_tools/brand/logo.png?raw=true" />
 
 # Video Tools
 
 Home Assistant custom integration that normalizes aspect ratio of videos and provides flexible video processing capabilities.
+
+Version **1.0.5** updates all repository links and adds Home Assistant 2026.11 Marketplace metadata and validation.
 
 ## Requirements
 
@@ -35,7 +37,7 @@ This integration **requires** the [Downloader](https://www.home-assistant.io/int
 2. Open HACS in your Home Assistant instance
 3. Click on "Integrations"
 4. Click the three dots in the top right corner and select "Custom repositories"
-5. Add the repository URL: `https://github.com/Geek-MD/Video_Normalizer`
+5. Add the repository URL: `https://github.com/Geek-MD/Video_Tools`
 6. Select "Integration" as the category
 7. Click "Add"
 8. Search for "Video Tools" in HACS
