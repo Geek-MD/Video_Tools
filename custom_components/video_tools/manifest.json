@@ -1,12 +1,14 @@
 {
   "domain": "video_tools",
   "name": "Video Tools",
+  "categories": ["media_entertainment"],
   "codeowners": ["@Geek-MD"],
   "config_flow": true,
   "dependencies": ["downloader"],
-  "documentation": "https://github.com/Geek-MD/Video_Normalizer",
-  "iot_class": "local_polling",
-  "issue_tracker": "https://github.com/Geek-MD/Video_Normalizer/issues",
+  "documentation": "https://github.com/Geek-MD/Video_Tools",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/Geek-MD/Video_Tools/issues",
   "requirements": [],
-  "version": "1.0.4"
+  "version": "1.0.5"
 }
